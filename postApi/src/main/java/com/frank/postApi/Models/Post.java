@@ -21,13 +21,13 @@ public class Post {
     private int likes;
     private double popularity;
     private int reads;
-    private List<Tag> tags = new ArrayList<>();
+    private List<String> tags ;
 
-    public List<Tag> getTags() {
+    public List<String> getTags() {
         return tags;
     }
 
-    public void setTags(List<Tag> tags) {
+    public void setTags(List<String> tags) {
         this.tags = tags;
     }
 
@@ -82,7 +82,13 @@ public class Post {
     @Override
     public String toString() {
         return "Post{" +
-                "tags=" + tags +
+                "author='" + author + '\'' +
+                ", authorId=" + authorId +
+                ", id=" + id +
+                ", likes=" + likes +
+                ", popularity=" + popularity +
+                ", reads=" + reads +
+                ", tags=" + tags +
                 '}';
     }
 }
